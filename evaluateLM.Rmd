@@ -1,0 +1,99 @@
+---
+title: "evaluateLM Manual"
+subtitle: "v.`r SpaDES.core::moduleMetadata(module = 'evaluateLM', path = '..')$version`"
+date: "Last updated: `r Sys.Date()`"
+output:
+  bookdown::html_document2:
+    toc: true
+    toc_float: true
+    theme: sandstone
+    number_sections: false
+    df_print: paged
+    keep_md: yes
+editor_options:
+  chunk_output_type: console
+  bibliography: citations/references_evaluateLM.bib
+link-citations: true
+always_allow_html: true
+---
+
+# evaluateLM Module
+
+<!-- the following are text references used in captions for LaTeX compatibility -->
+(ref:evaluateLM) *evaluateLM*
+
+```{r setup-evaluateLM, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE, results = "hold") ## change to eval = TRUE if all chunks are to be evaluated
+
+dir.create("figures", showWarnings = FALSE)
+
+download.file(url = "https://img.shields.io/badge/Made%20with-Markdown-1f425f.png",
+              destfile = "figures/markdownBadge.png",
+              mode = 'wb')
+```
+
+[![made-with-Markdown](figures/markdownBadge.png)](https://commonmark.org)
+
+<!-- if knitting to pdf remember to add the pandoc_args: ["--extract-media", "."] option to yml in order to get the badge images -->
+
+#### Authors:
+
+`r paste(as.character(SpaDES.core::moduleMetadata(module = "evaluateLM", path = '..')$authors), sep = ', ')`
+<!-- ideally separate authors with new lines, '\n' not working -->
+
+## Module Overview
+
+### Module summary
+
+This module was created to exemplify an evaluation procedure for a linear model. The model 
+prints prediction error (Residual Standard Error, or RSE), how well the model fits the data 
+(R-squared and adjusted R2, or R2), and plots residual vs fitted values, Normal Q-Q Plot, 
+performs Cross-Validation.
+
+### Module inputs and parameters
+
+Describe input data required by the module and how to obtain it (e.g., directly from online sources or supplied by other modules)
+If `sourceURL` is specified, `downloadData("evaluateLM", "C:/Users/Tati/Documents/GitHub")` may be sufficient.
+Table \@ref(tab:moduleInputs-evaluateLM) shows the full list of module inputs.
+
+```{r moduleInputs-evaluateLM, echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE}
+df_inputs <- SpaDES.core::moduleInputs("evaluateLM", "C:/Users/Tati/Documents/GitHub")
+knitr::kable(df_inputs,
+             caption = "List of (ref:evaluateLM) input objects and their description.") %>%
+  kableExtra::kable_styling(latex_options = "scale_down", full_width = TRUE)
+```
+
+Provide a summary of user-visible parameters (Table \@ref(tab:moduleParams-evaluateLM))
+
+
+```{r moduleParams-evaluateLM, echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE}
+df_params <- SpaDES.core::moduleParams("evaluateLM", "C:/Users/Tati/Documents/GitHub")
+knitr::kable(df_params, caption = "List of (ref:evaluateLM) parameters and their description.") %>%
+  kableExtra::kable_styling(latex_options = "scale_down", full_width = TRUE)
+```
+
+### Events
+
+The only event that happens (`evaluate`) tests if a LM is present at the end of a run, and presents 
+all the plots and statistics described above.
+
+### Module outputs
+
+Description of the module outputs (Table \@ref(tab:moduleOutputs-evaluateLM)).
+
+```{r moduleOutputs-evaluateLM, echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE}
+df_outputs <- SpaDES.core::moduleOutputs("evaluateLM", "C:/Users/Tati/Documents/GitHub")
+knitr::kable(df_outputs, caption = "List of (ref:evaluateLM) outputs and their description.") %>%
+  kableExtra::kable_styling(latex_options = "scale_down", full_width = TRUE)
+```
+
+### Links to other modules
+
+This module is stand-alone (although will not produce anything if the object `lm` is not 
+created in the project), but has been created to be ran with the module `speciesAbundTempLM` 
+as a way of demonstrating `SpaDES`, but can be expanded and used with other modules.
+
+### Getting help
+
+- Please use GitHub issues (https://github.com/tati-micheletti/evaluateLM/issues/new) 
+if you encounter any problems in using this module.
