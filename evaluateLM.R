@@ -47,7 +47,7 @@ doEvent.evaluateLM = function(sim, eventTime, eventType) {
       sim <- scheduleEvent(sim, end(sim), "evaluateLM", "evaluate")
     },
     evaluate = {
-      sim$modDiagnostics <- evaluateAbundTempLM(lm = sim$lm)
+      sim$modDiagnostics <- evaluateAbundTempLM(lm = sim$abundTempLM)
     },
     warning(paste("Undefined event type: \'", current(sim)[1, "eventType", with = FALSE],
                   "\' in module \'", current(sim)[1, "moduleName", with = FALSE], "\'", sep = ""))
