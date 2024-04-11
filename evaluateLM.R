@@ -21,7 +21,7 @@ defineModule(sim, list(
                     "Should caching of events or module be used?")
   ),
   inputObjects = bindrows(
-    expectsInput(objectName = "lm", 
+    expectsInput(objectName = "abundTempLM", 
                  objectClass = "lm", 
                  desc = paste0("A fitted model (of the `lm` class) of, for example,",
                                " abundance as a function of temperature."), 
@@ -56,7 +56,7 @@ doEvent.evaluateLM = function(sim, eventTime, eventType) {
 }
 
 .inputObjects <- function(sim) {
-  if (!suppliedElsewhere(object = "lm", sim = sim)) {
+  if (!suppliedElsewhere(object = "abundTempLM", sim = sim)) {
     # If not supplied by modules, generate data
     set.seed(1)
     x <- rnorm(100, 10, 2) # Predictor variable
@@ -64,8 +64,8 @@ doEvent.evaluateLM = function(sim, eventTime, eventType) {
     x_counts <- pmax(round(x), 0)
     dt <- data.frame(X = x_counts, Y = y)
     names(dt) <- c("abundance", "temperature")
-    sim$lm <- lm(abundance ~ temperature, data = dt)
-    warning("Object `lm` not being produced by any module. Using SIMULATED data!")
+    sim$abundTempLM <- lm(abundance ~ temperature, data = dt)
+    warning("Object `abundTempLM` not being produced by any module. Using SIMULATED data!")
   }
   return(invisible(sim))
 }
