@@ -59,7 +59,7 @@ Table \@ref(tab:moduleInputs-evaluateLM) shows the full list of module inputs.
 ```{r moduleInputs-evaluateLM, echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE}
 df_inputs <- SpaDES.core::moduleInputs("evaluateLM", "C:/Users/Tati/Documents/GitHub")
 knitr::kable(df_inputs,
-             caption = "List of (ref:evaluateLM) input objects and their description.") %>%
+             caption = "List of (ref:evaluateLM) input objects and their description.") |>
   kableExtra::kable_styling(latex_options = "scale_down", full_width = TRUE)
 ```
 
@@ -68,7 +68,7 @@ Provide a summary of user-visible parameters (Table \@ref(tab:moduleParams-evalu
 
 ```{r moduleParams-evaluateLM, echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE}
 df_params <- SpaDES.core::moduleParams("evaluateLM", "C:/Users/Tati/Documents/GitHub")
-knitr::kable(df_params, caption = "List of (ref:evaluateLM) parameters and their description.") %>%
+knitr::kable(df_params, caption = "List of (ref:evaluateLM) parameters and their description.") |>
   kableExtra::kable_styling(latex_options = "scale_down", full_width = TRUE)
 ```
 
@@ -83,7 +83,7 @@ Description of the module outputs (Table \@ref(tab:moduleOutputs-evaluateLM)).
 
 ```{r moduleOutputs-evaluateLM, echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE}
 df_outputs <- SpaDES.core::moduleOutputs("evaluateLM", "C:/Users/Tati/Documents/GitHub")
-knitr::kable(df_outputs, caption = "List of (ref:evaluateLM) outputs and their description.") %>%
+knitr::kable(df_outputs, caption = "List of (ref:evaluateLM) outputs and their description.") |>
   kableExtra::kable_styling(latex_options = "scale_down", full_width = TRUE)
 ```
 
