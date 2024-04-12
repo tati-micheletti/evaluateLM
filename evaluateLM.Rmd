@@ -52,8 +52,8 @@ performs Cross-Validation.
 
 ### Module inputs and parameters
 
-Describe input data required by the module and how to obtain it (e.g., directly from online sources or supplied by other modules)
-If `sourceURL` is specified, `downloadData("evaluateLM", "C:/Users/Tati/Documents/GitHub")` may be sufficient.
+The no parameters are used and the only input is an object of the class `lm|glm` named `abundTempLM`. 
+
 Table \@ref(tab:moduleInputs-evaluateLM) shows the full list of module inputs.
 
 ```{r moduleInputs-evaluateLM, echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE}
