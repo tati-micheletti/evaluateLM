@@ -25,7 +25,7 @@ always_allow_html: true
 
 
 [![made-with-Markdown](figures/markdownBadge.png)](https://commonmark.org)
-
+[![DOI](https://zenodo.org/badge/785246063.svg)](https://zenodo.org/doi/10.5281/zenodo.10964476)
 <!-- if knitting to pdf remember to add the pandoc_args: ["--extract-media", "."] option to yml in order to get the badge images -->
 
 #### Authors:
