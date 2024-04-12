@@ -1,7 +1,7 @@
 ---
 title: "evaluateLM Manual"
-subtitle: "v.0.0.0.9000"
-date: "Last updated: 2024-04-11"
+subtitle: "v.1.0.0"
+date: "Last updated: 2024-04-12"
 output:
   bookdown::html_document2:
     toc: true
@@ -48,7 +48,7 @@ Describe input data required by the module and how to obtain it (e.g., directly 
 If `sourceURL` is specified, `downloadData("evaluateLM", "C:/Users/Tati/Documents/GitHub")` may be sufficient.
 Table \@ref(tab:moduleInputs-evaluateLM) shows the full list of module inputs.
 
-<table class="table" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>(\#tab:moduleInputs-evaluateLM)(\#tab:moduleInputs-evaluateLM)List of (ref:evaluateLM) input objects and their description.</caption>
  <thead>
   <tr>
@@ -71,7 +71,7 @@ Table \@ref(tab:moduleInputs-evaluateLM) shows the full list of module inputs.
 Provide a summary of user-visible parameters (Table \@ref(tab:moduleParams-evaluateLM))
 
 
-<table class="table" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>(\#tab:moduleParams-evaluateLM)(\#tab:moduleParams-evaluateLM)List of (ref:evaluateLM) parameters and their description.</caption>
  <thead>
   <tr>
@@ -104,7 +104,7 @@ all the plots and statistics described above.
 
 Description of the module outputs (Table \@ref(tab:moduleOutputs-evaluateLM)).
 
-<table class="table" style="color: black; margin-left: auto; margin-right: auto;">
+<table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>(\#tab:moduleOutputs-evaluateLM)(\#tab:moduleOutputs-evaluateLM)List of (ref:evaluateLM) outputs and their description.</caption>
  <thead>
   <tr>
